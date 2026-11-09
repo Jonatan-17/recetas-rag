@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: recetas-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: recetas
+      POSTGRES_USER: recetas
+      POSTGRES_PASSWORD: recetas
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - recetas_data:/var/lib/postgresql/data
+
+volumes:
+  recetas_data:

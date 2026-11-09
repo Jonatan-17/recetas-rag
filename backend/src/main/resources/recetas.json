@@ -1,0 +1,372 @@
+[
+  {
+    "id": 1,
+    "nombre": "Arroz con pollo",
+    "descripcion": "Arroz amarillo con pollo desmechado y verduras, ideal para el almuerzo.",
+    "tiempoMinutos": 45,
+    "ingredientes": ["arroz", "pollo", "cebolla", "pimentón", "zanahoria", "arveja", "ajo", "sal", "aceite"],
+    "pasos": [
+      "Cocina el pollo en agua con sal, desméchalo y guarda el caldo.",
+      "Sofríe la cebolla, el ajo y el pimentón picados en aceite.",
+      "Agrega el arroz, la zanahoria, la arveja y el pollo, y cubre con el caldo.",
+      "Cocina a fuego bajo y tapado unos 20 minutos, hasta que el arroz esté seco."
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Huevos pericos",
+    "descripcion": "Huevos revueltos con tomate y cebolla larga, el desayuno clásico.",
+    "tiempoMinutos": 10,
+    "ingredientes": ["huevo", "tomate", "cebolla larga", "sal", "aceite"],
+    "pasos": [
+      "Pica el tomate y la cebolla larga en trozos pequeños.",
+      "Sofríelos en aceite durante unos 3 minutos.",
+      "Agrega los huevos batidos con sal y revuelve hasta que cuajen."
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Arepas con queso",
+    "descripcion": "Arepas de maíz rellenas de queso derretido.",
+    "tiempoMinutos": 25,
+    "ingredientes": ["harina de maíz", "queso", "mantequilla", "agua", "sal"],
+    "pasos": [
+      "Mezcla la harina de maíz con agua tibia y sal hasta formar una masa suave.",
+      "Haz bolas, aplánalas y pon queso en el centro de una de cada dos.",
+      "Cubre con otra capa de masa y sella bien los bordes.",
+      "Ásalas en un sartén con mantequilla hasta que estén doradas por ambos lados."
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Pasta en salsa de tomate",
+    "descripcion": "Pasta con una salsa sencilla de tomate natural y ajo.",
+    "tiempoMinutos": 25,
+    "ingredientes": ["pasta", "tomate", "cebolla", "ajo", "orégano", "sal", "aceite"],
+    "pasos": [
+      "Cocina la pasta en agua con sal según el paquete.",
+      "Sofríe la cebolla y el ajo picados en aceite.",
+      "Agrega el tomate picado y el orégano, y cocina 10 minutos hasta formar una salsa.",
+      "Mezcla la salsa con la pasta escurrida."
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Tortilla de papa",
+    "descripcion": "Tortilla gruesa de papa y huevo al estilo español.",
+    "tiempoMinutos": 35,
+    "ingredientes": ["papa", "huevo", "cebolla", "sal", "aceite"],
+    "pasos": [
+      "Corta la papa y la cebolla en láminas delgadas.",
+      "Fríelas en aceite a fuego medio hasta que la papa esté blanda.",
+      "Escúrrelas y mézclalas con los huevos batidos y sal.",
+      "Cuaja la mezcla en un sartén por ambos lados, dándole la vuelta con un plato."
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Ensalada de atún",
+    "descripcion": "Ensalada fresca de atún con verduras y limón.",
+    "tiempoMinutos": 10,
+    "ingredientes": ["atún", "lechuga", "tomate", "cebolla", "limón", "sal", "aceite"],
+    "pasos": [
+      "Lava y pica la lechuga, el tomate y la cebolla.",
+      "Escurre el atún y agrégalo a las verduras.",
+      "Aliña con limón, aceite y sal, y mezcla."
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Sopa de verduras",
+    "descripcion": "Sopa casera y liviana con verduras picadas.",
+    "tiempoMinutos": 40,
+    "ingredientes": ["papa", "zanahoria", "calabacín", "cebolla", "ajo", "sal", "agua"],
+    "pasos": [
+      "Pica todas las verduras en cubos.",
+      "Sofríe la cebolla y el ajo en una olla.",
+      "Agrega el resto de las verduras, cubre con agua y sal.",
+      "Cocina unos 25 minutos, hasta que la papa esté blanda."
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Lentejas guisadas",
+    "descripcion": "Lentejas con papa y un guiso de tomate y cebolla.",
+    "tiempoMinutos": 45,
+    "ingredientes": ["lenteja", "papa", "zanahoria", "tomate", "cebolla", "ajo", "comino", "sal", "aceite"],
+    "pasos": [
+      "Lava las lentejas y cocínalas en agua unos 15 minutos.",
+      "Prepara un guiso con tomate, cebolla, ajo y comino en aceite.",
+      "Agrega el guiso, la papa y la zanahoria en cubos a las lentejas.",
+      "Cocina 20 minutos más y ajusta la sal."
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Pollo al horno con papas",
+    "descripcion": "Presas de pollo horneadas con papas, ajo y limón.",
+    "tiempoMinutos": 60,
+    "ingredientes": ["pollo", "papa", "ajo", "limón", "orégano", "sal", "aceite"],
+    "pasos": [
+      "Adoba el pollo con ajo machacado, limón, orégano, sal y aceite.",
+      "Corta las papas en cascos y ponlas en una bandeja junto al pollo.",
+      "Hornea a 200 °C durante unos 50 minutos, volteando a la mitad."
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Bistec a caballo",
+    "descripcion": "Carne de res en salsa de tomate y cebolla, con huevo frito encima.",
+    "tiempoMinutos": 30,
+    "ingredientes": ["carne de res", "tomate", "cebolla", "huevo", "ajo", "sal", "aceite"],
+    "pasos": [
+      "Sazona la carne con sal y ajo y ásala en un sartén con aceite.",
+      "En el mismo sartén sofríe tomate y cebolla en tiras hasta formar una salsa.",
+      "Pon la carne de nuevo en la salsa por 5 minutos.",
+      "Sirve con un huevo frito encima."
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Patacones",
+    "descripcion": "Plátano verde frito y aplastado, crocante por fuera.",
+    "tiempoMinutos": 20,
+    "ingredientes": ["plátano verde", "sal", "aceite"],
+    "pasos": [
+      "Pela el plátano y córtalo en trozos gruesos.",
+      "Fríelos en aceite hasta que estén blandos.",
+      "Aplástalos y vuelve a freírlos hasta que estén dorados. Agrega sal."
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Plátano maduro con queso",
+    "descripcion": "Plátano maduro asado y relleno de queso.",
+    "tiempoMinutos": 25,
+    "ingredientes": ["plátano maduro", "queso", "mantequilla"],
+    "pasos": [
+      "Corta el plátano maduro a lo largo sin separarlo del todo.",
+      "Ásalo en un sartén con mantequilla hasta que esté blando.",
+      "Rellénalo con queso y tapa el sartén hasta que el queso se derrita."
+    ]
+  },
+  {
+    "id": 13,
+    "nombre": "Frijoles con plátano",
+    "descripcion": "Frijoles rojos espesos con plátano verde y guiso.",
+    "tiempoMinutos": 90,
+    "ingredientes": ["frijol", "plátano verde", "zanahoria", "tomate", "cebolla", "ajo", "sal"],
+    "pasos": [
+      "Deja los frijoles en remojo la noche anterior.",
+      "Cocínalos en olla a presión unos 40 minutos.",
+      "Agrega el plátano verde en trozos, la zanahoria y un guiso de tomate, cebolla y ajo.",
+      "Cocina sin presión hasta que espesen y ajusta la sal."
+    ]
+  },
+  {
+    "id": 14,
+    "nombre": "Changua",
+    "descripcion": "Caldo de leche con huevo y pan, típico del desayuno bogotano.",
+    "tiempoMinutos": 15,
+    "ingredientes": ["leche", "huevo", "cebolla larga", "cilantro", "pan", "sal", "agua"],
+    "pasos": [
+      "Hierve la leche con un poco de agua, sal y cebolla larga picada.",
+      "Rompe los huevos dentro del caldo y cocínalos 3 minutos sin revolver.",
+      "Sirve con cilantro picado y trozos de pan."
+    ]
+  },
+  {
+    "id": 15,
+    "nombre": "Quesadillas de jamón y queso",
+    "descripcion": "Tortillas de trigo doradas con jamón y queso derretido.",
+    "tiempoMinutos": 15,
+    "ingredientes": ["tortilla de trigo", "queso", "jamón", "tomate"],
+    "pasos": [
+      "Pon queso, jamón y tomate picado sobre media tortilla.",
+      "Dóblala por la mitad.",
+      "Dórala en un sartén por ambos lados hasta que el queso se derrita."
+    ]
+  },
+  {
+    "id": 16,
+    "nombre": "Sándwich de jamón y queso",
+    "descripcion": "Sándwich caliente y rápido para cualquier hora.",
+    "tiempoMinutos": 10,
+    "ingredientes": ["pan", "jamón", "queso", "tomate", "mantequilla"],
+    "pasos": [
+      "Unta mantequilla por fuera en las tajadas de pan.",
+      "Arma el sándwich con jamón, queso y tomate.",
+      "Tuéstalo en un sartén hasta que el queso se derrita."
+    ]
+  },
+  {
+    "id": 17,
+    "nombre": "Ensalada César con pollo",
+    "descripcion": "Lechuga con pollo a la plancha, crutones y queso parmesano.",
+    "tiempoMinutos": 25,
+    "ingredientes": ["lechuga", "pollo", "pan", "queso parmesano", "mayonesa", "limón", "ajo", "sal"],
+    "pasos": [
+      "Asa el pollo con sal y córtalo en tiras.",
+      "Corta el pan en cubos y tuéstalo para hacer crutones.",
+      "Mezcla mayonesa, limón y ajo para la salsa.",
+      "Junta la lechuga, el pollo, los crutones y el parmesano, y agrega la salsa."
+    ]
+  },
+  {
+    "id": 18,
+    "nombre": "Arroz frito",
+    "descripcion": "Arroz salteado con huevo, verduras y salsa de soya.",
+    "tiempoMinutos": 20,
+    "ingredientes": ["arroz", "huevo", "zanahoria", "arveja", "cebolla larga", "salsa de soya", "aceite"],
+    "pasos": [
+      "Usa arroz cocido del día anterior para que quede suelto.",
+      "Revuelve los huevos en un sartén caliente con aceite y sácalos.",
+      "Saltea la zanahoria, la arveja y la cebolla larga.",
+      "Agrega el arroz, el huevo y la salsa de soya, y saltea unos minutos."
+    ]
+  },
+  {
+    "id": 19,
+    "nombre": "Guacamole",
+    "descripcion": "Aguacate machacado con tomate, cebolla y cilantro.",
+    "tiempoMinutos": 10,
+    "ingredientes": ["aguacate", "tomate", "cebolla", "cilantro", "limón", "sal"],
+    "pasos": [
+      "Machaca el aguacate con un tenedor.",
+      "Agrega tomate, cebolla y cilantro bien picados.",
+      "Aliña con limón y sal."
+    ]
+  },
+  {
+    "id": 20,
+    "nombre": "Pancakes",
+    "descripcion": "Pancakes esponjosos para el desayuno.",
+    "tiempoMinutos": 20,
+    "ingredientes": ["harina de trigo", "huevo", "leche", "azúcar", "polvo de hornear", "mantequilla"],
+    "pasos": [
+      "Mezcla la harina, el azúcar y el polvo de hornear.",
+      "Agrega el huevo, la leche y la mantequilla derretida, y bate hasta que no queden grumos.",
+      "Cocina porciones de mezcla en un sartén caliente, volteando cuando salgan burbujas."
+    ]
+  },
+  {
+    "id": 21,
+    "nombre": "Arroz con leche",
+    "descripcion": "Postre cremoso de arroz cocido en leche con canela.",
+    "tiempoMinutos": 45,
+    "ingredientes": ["arroz", "leche", "azúcar", "canela", "agua"],
+    "pasos": [
+      "Cocina el arroz en agua con la canela hasta que se ablande.",
+      "Agrega la leche y el azúcar.",
+      "Cocina a fuego bajo, revolviendo, hasta que espese."
+    ]
+  },
+  {
+    "id": 22,
+    "nombre": "Batido de banano y avena",
+    "descripcion": "Bebida rápida y llenadora para el desayuno.",
+    "tiempoMinutos": 5,
+    "ingredientes": ["banano", "leche", "avena", "miel"],
+    "pasos": [
+      "Pon el banano, la leche, la avena y la miel en la licuadora.",
+      "Licúa hasta que quede suave y sirve frío."
+    ]
+  },
+  {
+    "id": 23,
+    "nombre": "Avena caliente con canela",
+    "descripcion": "Avena cocida en leche, dulce y espesa.",
+    "tiempoMinutos": 10,
+    "ingredientes": ["avena", "leche", "canela", "azúcar"],
+    "pasos": [
+      "Calienta la leche con la canela.",
+      "Agrega la avena y el azúcar.",
+      "Cocina revolviendo unos 5 minutos hasta que espese."
+    ]
+  },
+  {
+    "id": 24,
+    "nombre": "Pescado frito",
+    "descripcion": "Filetes de pescado apanados en harina y fritos.",
+    "tiempoMinutos": 25,
+    "ingredientes": ["pescado", "limón", "harina de trigo", "ajo", "sal", "aceite"],
+    "pasos": [
+      "Adoba el pescado con limón, ajo y sal por 10 minutos.",
+      "Pásalo por harina de trigo.",
+      "Fríelo en aceite caliente hasta que esté dorado por ambos lados."
+    ]
+  },
+  {
+    "id": 25,
+    "nombre": "Ceviche de camarón",
+    "descripcion": "Camarones en limón con tomate, cebolla y cilantro.",
+    "tiempoMinutos": 20,
+    "ingredientes": ["camarón", "limón", "cebolla", "tomate", "cilantro", "salsa de tomate", "sal"],
+    "pasos": [
+      "Cocina los camarones 2 minutos en agua hirviendo y enfríalos.",
+      "Mézclalos con jugo de limón, cebolla, tomate y cilantro picados.",
+      "Agrega salsa de tomate y sal al gusto, y deja enfriar en la nevera."
+    ]
+  },
+  {
+    "id": 26,
+    "nombre": "Pasta con pollo en salsa blanca",
+    "descripcion": "Pasta cremosa con pollo, champiñones y queso.",
+    "tiempoMinutos": 30,
+    "ingredientes": ["pasta", "pollo", "crema de leche", "champiñón", "ajo", "queso", "sal"],
+    "pasos": [
+      "Cocina la pasta en agua con sal.",
+      "Saltea el pollo en cubos con ajo y agrega los champiñones.",
+      "Agrega la crema de leche y el queso, y cocina hasta que espese.",
+      "Mezcla la salsa con la pasta."
+    ]
+  },
+  {
+    "id": 27,
+    "nombre": "Crema de ahuyama",
+    "descripcion": "Crema suave de ahuyama con un toque de crema de leche.",
+    "tiempoMinutos": 35,
+    "ingredientes": ["ahuyama", "cebolla", "ajo", "crema de leche", "sal", "agua"],
+    "pasos": [
+      "Cocina la ahuyama en cubos con cebolla, ajo y agua hasta que esté blanda.",
+      "Licúa todo hasta que quede suave.",
+      "Calienta de nuevo, agrega la crema de leche y ajusta la sal."
+    ]
+  },
+  {
+    "id": 28,
+    "nombre": "Hamburguesa casera",
+    "descripcion": "Hamburguesa de carne molida hecha en casa.",
+    "tiempoMinutos": 30,
+    "ingredientes": ["carne molida", "pan de hamburguesa", "lechuga", "tomate", "queso", "cebolla", "sal"],
+    "pasos": [
+      "Mezcla la carne molida con cebolla picada y sal, y forma las hamburguesas.",
+      "Ásalas en un sartén o parrilla y pon el queso encima al final.",
+      "Arma el pan con lechuga, tomate y la carne."
+    ]
+  },
+  {
+    "id": 29,
+    "nombre": "Albóndigas en salsa",
+    "descripcion": "Albóndigas de carne en salsa de tomate.",
+    "tiempoMinutos": 45,
+    "ingredientes": ["carne molida", "huevo", "pan rallado", "tomate", "cebolla", "ajo", "sal"],
+    "pasos": [
+      "Mezcla la carne molida con el huevo, el pan rallado, sal y ajo, y forma bolitas.",
+      "Dóralas en un sartén.",
+      "Prepara una salsa con tomate y cebolla, agrega las albóndigas y cocina 20 minutos."
+    ]
+  },
+  {
+    "id": 30,
+    "nombre": "Ensalada de frutas",
+    "descripcion": "Frutas picadas con yogur y miel.",
+    "tiempoMinutos": 15,
+    "ingredientes": ["banano", "mango", "fresa", "papaya", "yogur", "miel"],
+    "pasos": [
+      "Pica todas las frutas en cubos.",
+      "Mézclalas en un recipiente.",
+      "Sirve con yogur y miel por encima."
+    ]
+  }
+]

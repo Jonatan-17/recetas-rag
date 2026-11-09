@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas con lo que tienes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="contenedor">
+
+    <header class="encabezado">
+        <h1>Recetas con lo que tienes</h1>
+        <p>Escribe los ingredientes que hay en tu cocina y te sugerimos qué preparar.</p>
+    </header>
+
+    <form id="formulario" class="formulario" novalidate>
+        <label for="ingredientes">¿Qué ingredientes tienes?</label>
+        <div class="fila">
+            <input
+                id="ingredientes"
+                type="text"
+                maxlength="300"
+                placeholder="Ej: arroz, pollo, cebolla"
+                autocomplete="off"
+            >
+            <button type="submit" id="btnBuscar">Buscar recetas</button>
+        </div>
+
+        <div class="ejemplos">
+            <span>Prueba con:</span>
+            <button type="button" class="ejemplo">arroz, pollo y cebolla</button>
+            <button type="button" class="ejemplo">huevo, tomate y pan</button>
+            <button type="button" class="ejemplo">plátano y queso</button>
+        </div>
+
+        <p class="nota">Se asume que tienes sal, pimienta, aceite y agua.</p>
+    </form>
+
+    <p id="estado" class="estado" role="status" hidden></p>
+
+    <section id="resultado" class="resultado" hidden>
+        <div class="explicacion">
+            <h2>Sugerencia</h2>
+            <p id="explicacion"></p>
+        </div>
+        <div id="tarjetas" class="tarjetas"></div>
+    </section>
+
+    <section class="favoritos">
+        <h2>Mis favoritos</h2>
+        <ul id="listaFavoritos"></ul>
+        <p id="sinFavoritos" class="vacio">Todavía no has guardado recetas.</p>
+    </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

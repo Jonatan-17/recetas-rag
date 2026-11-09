@@ -1,0 +1,216 @@
+[
+  {
+    "updatedAt": "2026-11-09T14:08:25.110Z",
+    "createdAt": "2026-11-09T14:08:25.110Z",
+    "id": "recetasIngesta01",
+    "name": "Recetas - Ingesta en Qdrant",
+    "description": null,
+    "active": false,
+    "isArchived": false,
+    "nodes": [
+      {
+        "parameters": {},
+        "type": "n8n-nodes-base.manualTrigger",
+        "typeVersion": 1,
+        "position": [
+          0,
+          0
+        ],
+        "id": "19aee7aa-3bca-46f2-be1c-60a5ba50e3a3",
+        "name": "Ejecutar ingesta"
+      },
+      {
+        "parameters": {
+          "jsCode": "const recetas = [\n  {\n    \"id\": 1,\n    \"nombre\": \"Arroz con pollo\",\n    \"descripcion\": \"Arroz amarillo con pollo desmechado y verduras, ideal para el almuerzo.\",\n    \"ingredientes\": [\n      \"arroz\",\n      \"pollo\",\n      \"cebolla\",\n      \"pimentón\",\n      \"zanahoria\",\n      \"arveja\",\n      \"ajo\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Cocina el pollo en agua con sal, desméchalo y guarda el caldo.\",\n      \"Sofríe la cebolla, el ajo y el pimentón picados en aceite.\",\n      \"Agrega el arroz, la zanahoria, la arveja y el pollo, y cubre con el caldo.\",\n      \"Cocina a fuego bajo y tapado unos 20 minutos, hasta que el arroz esté seco.\"\n    ]\n  },\n  {\n    \"id\": 2,\n    \"nombre\": \"Huevos pericos\",\n    \"descripcion\": \"Huevos revueltos con tomate y cebolla larga, el desayuno clásico.\",\n    \"ingredientes\": [\n      \"huevo\",\n      \"tomate\",\n      \"cebolla larga\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Pica el tomate y la cebolla larga en trozos pequeños.\",\n      \"Sofríelos en aceite durante unos 3 minutos.\",\n      \"Agrega los huevos batidos con sal y revuelve hasta que cuajen.\"\n    ]\n  },\n  {\n    \"id\": 3,\n    \"nombre\": \"Arepas con queso\",\n    \"descripcion\": \"Arepas de maíz rellenas de queso derretido.\",\n    \"ingredientes\": [\n      \"harina de maíz\",\n      \"queso\",\n      \"mantequilla\",\n      \"agua\",\n      \"sal\"\n    ],\n    \"pasos\": [\n      \"Mezcla la harina de maíz con agua tibia y sal hasta formar una masa suave.\",\n      \"Haz bolas, aplánalas y pon queso en el centro de una de cada dos.\",\n      \"Cubre con otra capa de masa y sella bien los bordes.\",\n      \"Ásalas en un sartén con mantequilla hasta que estén doradas por ambos lados.\"\n    ]\n  },\n  {\n    \"id\": 4,\n    \"nombre\": \"Pasta en salsa de tomate\",\n    \"descripcion\": \"Pasta con una salsa sencilla de tomate natural y ajo.\",\n    \"ingredientes\": [\n      \"pasta\",\n      \"tomate\",\n      \"cebolla\",\n      \"ajo\",\n      \"orégano\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Cocina la pasta en agua con sal según el paquete.\",\n      \"Sofríe la cebolla y el ajo picados en aceite.\",\n      \"Agrega el tomate picado y el orégano, y cocina 10 minutos hasta formar una salsa.\",\n      \"Mezcla la salsa con la pasta escurrida.\"\n    ]\n  },\n  {\n    \"id\": 5,\n    \"nombre\": \"Tortilla de papa\",\n    \"descripcion\": \"Tortilla gruesa de papa y huevo al estilo español.\",\n    \"ingredientes\": [\n      \"papa\",\n      \"huevo\",\n      \"cebolla\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Corta la papa y la cebolla en láminas delgadas.\",\n      \"Fríelas en aceite a fuego medio hasta que la papa esté blanda.\",\n      \"Escúrrelas y mézclalas con los huevos batidos y sal.\",\n      \"Cuaja la mezcla en un sartén por ambos lados, dándole la vuelta con un plato.\"\n    ]\n  },\n  {\n    \"id\": 6,\n    \"nombre\": \"Ensalada de atún\",\n    \"descripcion\": \"Ensalada fresca de atún con verduras y limón.\",\n    \"ingredientes\": [\n      \"atún\",\n      \"lechuga\",\n      \"tomate\",\n      \"cebolla\",\n      \"limón\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Lava y pica la lechuga, el tomate y la cebolla.\",\n      \"Escurre el atún y agrégalo a las verduras.\",\n      \"Aliña con limón, aceite y sal, y mezcla.\"\n    ]\n  },\n  {\n    \"id\": 7,\n    \"nombre\": \"Sopa de verduras\",\n    \"descripcion\": \"Sopa casera y liviana con verduras picadas.\",\n    \"ingredientes\": [\n      \"papa\",\n      \"zanahoria\",\n      \"calabacín\",\n      \"cebolla\",\n      \"ajo\",\n      \"sal\",\n      \"agua\"\n    ],\n    \"pasos\": [\n      \"Pica todas las verduras en cubos.\",\n      \"Sofríe la cebolla y el ajo en una olla.\",\n      \"Agrega el resto de las verduras, cubre con agua y sal.\",\n      \"Cocina unos 25 minutos, hasta que la papa esté blanda.\"\n    ]\n  },\n  {\n    \"id\": 8,\n    \"nombre\": \"Lentejas guisadas\",\n    \"descripcion\": \"Lentejas con papa y un guiso de tomate y cebolla.\",\n    \"ingredientes\": [\n      \"lenteja\",\n      \"papa\",\n      \"zanahoria\",\n      \"tomate\",\n      \"cebolla\",\n      \"ajo\",\n      \"comino\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Lava las lentejas y cocínalas en agua unos 15 minutos.\",\n      \"Prepara un guiso con tomate, cebolla, ajo y comino en aceite.\",\n      \"Agrega el guiso, la papa y la zanahoria en cubos a las lentejas.\",\n      \"Cocina 20 minutos más y ajusta la sal.\"\n    ]\n  },\n  {\n    \"id\": 9,\n    \"nombre\": \"Pollo al horno con papas\",\n    \"descripcion\": \"Presas de pollo horneadas con papas, ajo y limón.\",\n    \"ingredientes\": [\n      \"pollo\",\n      \"papa\",\n      \"ajo\",\n      \"limón\",\n      \"orégano\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Adoba el pollo con ajo machacado, limón, orégano, sal y aceite.\",\n      \"Corta las papas en cascos y ponlas en una bandeja junto al pollo.\",\n      \"Hornea a 200 °C durante unos 50 minutos, volteando a la mitad.\"\n    ]\n  },\n  {\n    \"id\": 10,\n    \"nombre\": \"Bistec a caballo\",\n    \"descripcion\": \"Carne de res en salsa de tomate y cebolla, con huevo frito encima.\",\n    \"ingredientes\": [\n      \"carne de res\",\n      \"tomate\",\n      \"cebolla\",\n      \"huevo\",\n      \"ajo\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Sazona la carne con sal y ajo y ásala en un sartén con aceite.\",\n      \"En el mismo sartén sofríe tomate y cebolla en tiras hasta formar una salsa.\",\n      \"Pon la carne de nuevo en la salsa por 5 minutos.\",\n      \"Sirve con un huevo frito encima.\"\n    ]\n  },\n  {\n    \"id\": 11,\n    \"nombre\": \"Patacones\",\n    \"descripcion\": \"Plátano verde frito y aplastado, crocante por fuera.\",\n    \"ingredientes\": [\n      \"plátano verde\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Pela el plátano y córtalo en trozos gruesos.\",\n      \"Fríelos en aceite hasta que estén blandos.\",\n      \"Aplástalos y vuelve a freírlos hasta que estén dorados. Agrega sal.\"\n    ]\n  },\n  {\n    \"id\": 12,\n    \"nombre\": \"Plátano maduro con queso\",\n    \"descripcion\": \"Plátano maduro asado y relleno de queso.\",\n    \"ingredientes\": [\n      \"plátano maduro\",\n      \"queso\",\n      \"mantequilla\"\n    ],\n    \"pasos\": [\n      \"Corta el plátano maduro a lo largo sin separarlo del todo.\",\n      \"Ásalo en un sartén con mantequilla hasta que esté blando.\",\n      \"Rellénalo con queso y tapa el sartén hasta que el queso se derrita.\"\n    ]\n  },\n  {\n    \"id\": 13,\n    \"nombre\": \"Frijoles con plátano\",\n    \"descripcion\": \"Frijoles rojos espesos con plátano verde y guiso.\",\n    \"ingredientes\": [\n      \"frijol\",\n      \"plátano verde\",\n      \"zanahoria\",\n      \"tomate\",\n      \"cebolla\",\n      \"ajo\",\n      \"sal\"\n    ],\n    \"pasos\": [\n      \"Deja los frijoles en remojo la noche anterior.\",\n      \"Cocínalos en olla a presión unos 40 minutos.\",\n      \"Agrega el plátano verde en trozos, la zanahoria y un guiso de tomate, cebolla y ajo.\",\n      \"Cocina sin presión hasta que espesen y ajusta la sal.\"\n    ]\n  },\n  {\n    \"id\": 14,\n    \"nombre\": \"Changua\",\n    \"descripcion\": \"Caldo de leche con huevo y pan, típico del desayuno bogotano.\",\n    \"ingredientes\": [\n      \"leche\",\n      \"huevo\",\n      \"cebolla larga\",\n      \"cilantro\",\n      \"pan\",\n      \"sal\",\n      \"agua\"\n    ],\n    \"pasos\": [\n      \"Hierve la leche con un poco de agua, sal y cebolla larga picada.\",\n      \"Rompe los huevos dentro del caldo y cocínalos 3 minutos sin revolver.\",\n      \"Sirve con cilantro picado y trozos de pan.\"\n    ]\n  },\n  {\n    \"id\": 15,\n    \"nombre\": \"Quesadillas de jamón y queso\",\n    \"descripcion\": \"Tortillas de trigo doradas con jamón y queso derretido.\",\n    \"ingredientes\": [\n      \"tortilla de trigo\",\n      \"queso\",\n      \"jamón\",\n      \"tomate\"\n    ],\n    \"pasos\": [\n      \"Pon queso, jamón y tomate picado sobre media tortilla.\",\n      \"Dóblala por la mitad.\",\n      \"Dórala en un sartén por ambos lados hasta que el queso se derrita.\"\n    ]\n  },\n  {\n    \"id\": 16,\n    \"nombre\": \"Sándwich de jamón y queso\",\n    \"descripcion\": \"Sándwich caliente y rápido para cualquier hora.\",\n    \"ingredientes\": [\n      \"pan\",\n      \"jamón\",\n      \"queso\",\n      \"tomate\",\n      \"mantequilla\"\n    ],\n    \"pasos\": [\n      \"Unta mantequilla por fuera en las tajadas de pan.\",\n      \"Arma el sándwich con jamón, queso y tomate.\",\n      \"Tuéstalo en un sartén hasta que el queso se derrita.\"\n    ]\n  },\n  {\n    \"id\": 17,\n    \"nombre\": \"Ensalada César con pollo\",\n    \"descripcion\": \"Lechuga con pollo a la plancha, crutones y queso parmesano.\",\n    \"ingredientes\": [\n      \"lechuga\",\n      \"pollo\",\n      \"pan\",\n      \"queso parmesano\",\n      \"mayonesa\",\n      \"limón\",\n      \"ajo\",\n      \"sal\"\n    ],\n    \"pasos\": [\n      \"Asa el pollo con sal y córtalo en tiras.\",\n      \"Corta el pan en cubos y tuéstalo para hacer crutones.\",\n      \"Mezcla mayonesa, limón y ajo para la salsa.\",\n      \"Junta la lechuga, el pollo, los crutones y el parmesano, y agrega la salsa.\"\n    ]\n  },\n  {\n    \"id\": 18,\n    \"nombre\": \"Arroz frito\",\n    \"descripcion\": \"Arroz salteado con huevo, verduras y salsa de soya.\",\n    \"ingredientes\": [\n      \"arroz\",\n      \"huevo\",\n      \"zanahoria\",\n      \"arveja\",\n      \"cebolla larga\",\n      \"salsa de soya\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Usa arroz cocido del día anterior para que quede suelto.\",\n      \"Revuelve los huevos en un sartén caliente con aceite y sácalos.\",\n      \"Saltea la zanahoria, la arveja y la cebolla larga.\",\n      \"Agrega el arroz, el huevo y la salsa de soya, y saltea unos minutos.\"\n    ]\n  },\n  {\n    \"id\": 19,\n    \"nombre\": \"Guacamole\",\n    \"descripcion\": \"Aguacate machacado con tomate, cebolla y cilantro.\",\n    \"ingredientes\": [\n      \"aguacate\",\n      \"tomate\",\n      \"cebolla\",\n      \"cilantro\",\n      \"limón\",\n      \"sal\"\n    ],\n    \"pasos\": [\n      \"Machaca el aguacate con un tenedor.\",\n      \"Agrega tomate, cebolla y cilantro bien picados.\",\n      \"Aliña con limón y sal.\"\n    ]\n  },\n  {\n    \"id\": 20,\n    \"nombre\": \"Pancakes\",\n    \"descripcion\": \"Pancakes esponjosos para el desayuno.\",\n    \"ingredientes\": [\n      \"harina de trigo\",\n      \"huevo\",\n      \"leche\",\n      \"azúcar\",\n      \"polvo de hornear\",\n      \"mantequilla\"\n    ],\n    \"pasos\": [\n      \"Mezcla la harina, el azúcar y el polvo de hornear.\",\n      \"Agrega el huevo, la leche y la mantequilla derretida, y bate hasta que no queden grumos.\",\n      \"Cocina porciones de mezcla en un sartén caliente, volteando cuando salgan burbujas.\"\n    ]\n  },\n  {\n    \"id\": 21,\n    \"nombre\": \"Arroz con leche\",\n    \"descripcion\": \"Postre cremoso de arroz cocido en leche con canela.\",\n    \"ingredientes\": [\n      \"arroz\",\n      \"leche\",\n      \"azúcar\",\n      \"canela\",\n      \"agua\"\n    ],\n    \"pasos\": [\n      \"Cocina el arroz en agua con la canela hasta que se ablande.\",\n      \"Agrega la leche y el azúcar.\",\n      \"Cocina a fuego bajo, revolviendo, hasta que espese.\"\n    ]\n  },\n  {\n    \"id\": 22,\n    \"nombre\": \"Batido de banano y avena\",\n    \"descripcion\": \"Bebida rápida y llenadora para el desayuno.\",\n    \"ingredientes\": [\n      \"banano\",\n      \"leche\",\n      \"avena\",\n      \"miel\"\n    ],\n    \"pasos\": [\n      \"Pon el banano, la leche, la avena y la miel en la licuadora.\",\n      \"Licúa hasta que quede suave y sirve frío.\"\n    ]\n  },\n  {\n    \"id\": 23,\n    \"nombre\": \"Avena caliente con canela\",\n    \"descripcion\": \"Avena cocida en leche, dulce y espesa.\",\n    \"ingredientes\": [\n      \"avena\",\n      \"leche\",\n      \"canela\",\n      \"azúcar\"\n    ],\n    \"pasos\": [\n      \"Calienta la leche con la canela.\",\n      \"Agrega la avena y el azúcar.\",\n      \"Cocina revolviendo unos 5 minutos hasta que espese.\"\n    ]\n  },\n  {\n    \"id\": 24,\n    \"nombre\": \"Pescado frito\",\n    \"descripcion\": \"Filetes de pescado apanados en harina y fritos.\",\n    \"ingredientes\": [\n      \"pescado\",\n      \"limón\",\n      \"harina de trigo\",\n      \"ajo\",\n      \"sal\",\n      \"aceite\"\n    ],\n    \"pasos\": [\n      \"Adoba el pescado con limón, ajo y sal por 10 minutos.\",\n      \"Pásalo por harina de trigo.\",\n      \"Fríelo en aceite caliente hasta que esté dorado por ambos lados.\"\n    ]\n  },\n  {\n    \"id\": 25,\n    \"nombre\": \"Ceviche de camarón\",\n    \"descripcion\": \"Camarones en limón con tomate, cebolla y cilantro.\",\n    \"ingredientes\": [\n      \"camarón\",\n      \"limón\",\n      \"cebolla\",\n      \"tomate\",\n      \"cilantro\",\n      \"salsa de tomate\",\n      \"sal\"\n    ],\n    \"pasos\": [\n      \"Cocina los camarones 2 minutos en agua hirviendo y enfríalos.\",\n      \"Mézclalos con jugo de limón, cebolla, tomate y cilantro picados.\",\n      \"Agrega salsa de tomate y sal al gusto, y deja enfriar en la nevera.\"\n    ]\n  },\n  {\n    \"id\": 26,\n    \"nombre\": \"Pasta con pollo en salsa blanca\",\n    \"descripcion\": \"Pasta cremosa con pollo, champiñones y queso.\",\n    \"ingredientes\": [\n      \"pasta\",\n      \"pollo\",\n      \"crema de leche\",\n      \"champiñón\",\n      \"ajo\",\n      \"queso\",\n      \"sal\"\n    ],\n    \"pasos\": [\n      \"Cocina la pasta en agua con sal.\",\n      \"Saltea el pollo en cubos con ajo y agrega los champiñones.\",\n      \"Agrega la crema de leche y el queso, y cocina hasta que espese.\",\n      \"Mezcla la salsa con la pasta.\"\n    ]\n  },\n  {\n    \"id\": 27,\n    \"nombre\": \"Crema de ahuyama\",\n    \"descripcion\": \"Crema suave de ahuyama con un toque de crema de leche.\",\n    \"ingredientes\": [\n      \"ahuyama\",\n      \"cebolla\",\n      \"ajo\",\n      \"crema de leche\",\n      \"sal\",\n      \"agua\"\n    ],\n    \"pasos\": [\n      \"Cocina la ahuyama en cubos con cebolla, ajo y agua hasta que esté blanda.\",\n      \"Licúa todo hasta que quede suave.\",\n      \"Calienta de nuevo, agrega la crema de leche y ajusta la sal.\"\n    ]\n  },\n  {\n    \"id\": 28,\n    \"nombre\": \"Hamburguesa casera\",\n    \"descripcion\": \"Hamburguesa de carne molida hecha en casa.\",\n    \"ingredientes\": [\n      \"carne molida\",\n      \"pan de hamburguesa\",\n      \"lechuga\",\n      \"tomate\",\n      \"queso\",\n      \"cebolla\",\n      \"sal\"\n    ],\n    \"pasos\": [\n      \"Mezcla la carne molida con cebolla picada y sal, y forma las hamburguesas.\",\n      \"Ásalas en un sartén o parrilla y pon el queso encima al final.\",\n      \"Arma el pan con lechuga, tomate y la carne.\"\n    ]\n  },\n  {\n    \"id\": 29,\n    \"nombre\": \"Albóndigas en salsa\",\n    \"descripcion\": \"Albóndigas de carne en salsa de tomate.\",\n    \"ingredientes\": [\n      \"carne molida\",\n      \"huevo\",\n      \"pan rallado\",\n      \"tomate\",\n      \"cebolla\",\n      \"ajo\",\n      \"sal\"\n    ],\n    \"pasos\": [\n      \"Mezcla la carne molida con el huevo, el pan rallado, sal y ajo, y forma bolitas.\",\n      \"Dóralas en un sartén.\",\n      \"Prepara una salsa con tomate y cebolla, agrega las albóndigas y cocina 20 minutos.\"\n    ]\n  },\n  {\n    \"id\": 30,\n    \"nombre\": \"Ensalada de frutas\",\n    \"descripcion\": \"Frutas picadas con yogur y miel.\",\n    \"ingredientes\": [\n      \"banano\",\n      \"mango\",\n      \"fresa\",\n      \"papaya\",\n      \"yogur\",\n      \"miel\"\n    ],\n    \"pasos\": [\n      \"Pica todas las frutas en cubos.\",\n      \"Mézclalas en un recipiente.\",\n      \"Sirve con yogur y miel por encima.\"\n    ]\n  }\n];\n\nreturn [{ json: {\n  qdrant_url: 'http://qdrant:6333',\n  coleccion: 'recetas',\n  modelo_embedding: 'openai/text-embedding-3-small',\n  recetas\n} }];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          220,
+          0
+        ],
+        "id": "75ecd003-cb77-4f2d-8fb1-af2d08c6c648",
+        "name": "Recetas"
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://openrouter.ai/api/v1/embeddings",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpBearerAuth",
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ JSON.stringify({ model: $json.modelo_embedding, input: $json.recetas.map(r => `Receta: ${r.nombre}. ${r.descripcion} Ingredientes: ${r.ingredientes.join(', ')}.`), encoding_format: 'float' }) }}",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          440,
+          0
+        ],
+        "id": "5912fb5a-79da-4234-9ab7-4a123fb90f48",
+        "name": "Embeddings recetas",
+        "credentials": {
+          "httpBearerAuth": {
+            "id": "rd3qtOvIftGTm3OE",
+            "name": "Bearer Auth account 3"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "const c = $('Recetas').first().json;\nconst r = $input.first().json;\n\nif (!Array.isArray(r.data) || r.data.length !== c.recetas.length) {\n  throw new Error('La cantidad de embeddings no coincide con la cantidad de recetas');\n}\n\nconst points = c.recetas.map((receta, i) => ({\n  id: receta.id,\n  vector: r.data[i].embedding,\n  payload: { nombre: receta.nombre, ingredientes: receta.ingredientes, pasos: receta.pasos }\n}));\n\nreturn [{ json: { qdrant_url: c.qdrant_url, coleccion: c.coleccion, vector_size: points[0].vector.length, points } }];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          660,
+          0
+        ],
+        "id": "f718cac7-49df-4d5d-942c-9debbe4853e1",
+        "name": "Preparar puntos"
+      },
+      {
+        "parameters": {
+          "method": "DELETE",
+          "url": "={{ $json.qdrant_url + '/collections/' + $json.coleccion }}",
+          "options": {
+            "response": {
+              "response": {
+                "neverError": true
+              }
+            }
+          }
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          880,
+          0
+        ],
+        "id": "ec7a31e7-5dc4-4557-8c7c-cb83e6da5cae",
+        "name": "Borrar coleccion"
+      },
+      {
+        "parameters": {
+          "method": "PUT",
+          "url": "={{ $('Preparar puntos').first().json.qdrant_url + '/collections/' + $('Preparar puntos').first().json.coleccion }}",
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ JSON.stringify({ vectors: { size: $('Preparar puntos').first().json.vector_size, distance: 'Cosine' } }) }}",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          1100,
+          0
+        ],
+        "id": "8d601896-b3b1-4d3d-9d4f-04396098d9eb",
+        "name": "Crear coleccion"
+      },
+      {
+        "parameters": {
+          "method": "PUT",
+          "url": "={{ $('Preparar puntos').first().json.qdrant_url + '/collections/' + $('Preparar puntos').first().json.coleccion + '/points?wait=true' }}",
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={{ JSON.stringify({ points: $('Preparar puntos').first().json.points }) }}",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          1320,
+          0
+        ],
+        "id": "6d8b999a-d612-4ec6-af0c-d2a5ee0bfc4e",
+        "name": "Guardar en Qdrant"
+      }
+    ],
+    "connections": {
+      "Ejecutar ingesta": {
+        "main": [
+          [
+            {
+              "node": "Recetas",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Recetas": {
+        "main": [
+          [
+            {
+              "node": "Embeddings recetas",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Embeddings recetas": {
+        "main": [
+          [
+            {
+              "node": "Preparar puntos",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Preparar puntos": {
+        "main": [
+          [
+            {
+              "node": "Borrar coleccion",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Borrar coleccion": {
+        "main": [
+          [
+            {
+              "node": "Crear coleccion",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Crear coleccion": {
+        "main": [
+          [
+            {
+              "node": "Guardar en Qdrant",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1"
+    },
+    "staticData": null,
+    "meta": null,
+    "pinData": {},
+    "versionId": "040bc5e0-aee1-469c-aef3-c23490e4f163",
+    "activeVersionId": null,
+    "versionCounter": 2,
+    "triggerCount": 0,
+    "tags": [],
+    "versionMetadata": {
+      "name": null,
+      "description": null
+    }
+  }
+]
